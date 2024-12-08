@@ -57,6 +57,7 @@ function validateSignUp(event) {
         return false;
     }
 
+
     alert("Sign-up successful!");
-    window.location.href = "Homepage.html";
+    window.location.href = "Log_in.html";
 }
