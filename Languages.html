@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Languages / Courses </title>
+    <link rel="icon" type="image/png" href="Images/logo.png">
+
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #2c3e50 50%, rgba(44, 62, 80, 0.8) 100%), 
+      url(https://www.teachermagazine.com/assets/images/teacher/Implementing-tutoring-interventions-in-schools.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #ecf0f1;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 96%;
+  background: linear-gradient(135deg, #2e547a, #2c4e70); /*chatgpt*/
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out; 
+}
+
+.navbar .logo {
+  display: flex;  /* Use Flexbox to align items in a row */
+  align-items: center;  /* Vertically center the items */
+}
+
+.navbar .logo img {
+  width: 60px;  /* Adjust the size of the logo */
+  height: 60px;  /* Maintain aspect ratio */
+  margin-right: 10px;  /* Space between the logo and text */
+}
+
+.navbar .logo a {
+  color: #ecf0f1;
+  font-size: 26px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin: 1px 20px;
+}
+
+.navbar .nav-links a {
+  color: #9abbc3; /* Lighter text color */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #1abc9c; /* Lighter green color */
+}
+.navbar .loginsignup a {
+            color: #ecf0f1; 
+            font-size: 18px;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #e74c3c; /* Red background */
+            border-radius: 4px;
+            margin-left: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar .loginsignup a:hover {
+            background-color: #c0392b; /* Darker red on hover */
+            color: #fff;
+        }
+
+.language-section {
+  text-align: center;
+  padding: 20px;
+  color: #ecf0f1;
+  margin-top: 10%;
+  padding-bottom: 10%;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.language-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.language-card {
+  background-color: #2c3e50;
+  padding: 15px;
+  border-radius: 10px;
+  width: 230px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.language-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.language-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.language-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #e74c3c;
+}
+a{
+    text-decoration: none;
+    color: #e74c3c;
+}
+.contacts {
+  margin-top: 4%;
+  padding-top: 3%;
+  text-align: center;
+}
+
+#contact {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #34495e;
+  color: #ecf0f1;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+  margin-top: 5%;
+}
+
+.contact-info .info-item {
+  text-align: left;
+}
+
+.contact-info .info-item i {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #1abc9c;
+}
+
+.contact-info p {
+  font-size: 18px;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #ecf0f1;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form input[type="text"], 
+.contact-form input[type="email"], 
+.contact-form textarea {
+  background-color: #34495e;
+  color: #ecf0f1;
+}
+
+.contact-form button {
+  padding: 14px;
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #16a085;
+}
+.whole{
+    background:  rgba(49, 76, 104, 0.4);
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="Images/logo.png" alt="Logo">
+      <a href="Homepage.html">Cool School</a>
+  </div>
+    <ul class="nav-links">
+      <li><a href="Homepage.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Languages.html">Language/Courses</a></li>
+      <li><a href="Homepage.html#contacts">Contact</a></li>
+    </ul>
+    <div class="loginsignup">
+      <a href="index.html">Log Out</a>
+    </div>
+  </div>
+
+
+  <section class="language-section">
+    <h2 class="section-title">Languages</h2>
+    <div class="language-grid">
+        <div class="language-card">
+        <img src="https://th.bing.com/th/id/R.20ef7db601a5550ebf6db8cd8fab7e28?rik=Tz4jU2Ipw2nIIg&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f8%2fd%2f5%2f310302.jpg&ehk=EcyFrZlSI1vkmQWFZyfeBkM8sYRCUX3l48s2F3rDD9s%3d&risl=&pid=ImgRaw&r=0x`" alt="French Language" class="language-img">
+        <p class="language-name"><a href="KoreanBooking.html">Korean</a></p>
+      </div>
+      <div class="language-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png" alt="Spanish Language" class="language-img">
+        <p class="language-name"><a href="GermanBooking.html">German</a></p>
+      </div>
+      <div class="language-card">
+        <img src="https://th.bing.com/th/id/OIP.dSC9ZPqMKXCbh4JeeoNI9gHaE9?w=1052&h=704&rs=1&pid=ImgDetMain" alt="Japanese Language" class="language-img">
+        <p class="language-name"><a href="JapaneseBooking.html">Japanese</a></p>
+      </div>
+      <div class="language-card">
+        <img src="https://th.bing.com/th/id/OIP.rB0ix8Ofv_JFBbTJqGXPBgHaEK?rs=1&pid=ImgDetMain" alt="Mandarin Language" class="language-img">
+        <p class="language-name"><a href="MandarinBooking.html">Mandarin</a></p>
+      </div>
+      <div class="language-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_the_Philippines.svg" alt="Filipino Language" class="language-img">
+        <p class="language-name"><a href="FilipinoBooking.html">Filipino</a></p>
+      </div>
+      <div class="language-card">
+        <img src="https://www.pixelstalk.net/wp-content/uploads/2016/07/French-Flag-HD-Image.png" alt="French Language" class="language-img">
+        <p class="language-name"><a href="FrenchBooking.html">French</a></p>
+      </div>
+      <div class="language-card">
+        <img src="https://www.bing.com/th?id=OIP.YHufaYYtdq8EtHQRPAx_9QHaE8&w=312&h=200&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Hindi Language" class="language-img">
+        <p class="language-name"><a href="HinduBooking.html">Hindi</a></p>
+      </div>
+      <div class="language-card">
+        <img src="https://th.bing.com/th/id/OIP.nuyV6XtDS4qzhlFTDf9JSgHaD6?w=302&h=180&c=7&r=0&o=5&pid=1.7" alt="Russian Language" class="language-img">
+        <p class="language-name"><a href="RussianBooking.html">Russian</a></p>
+      </div>
+
+
+    
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+<div class="whole">
+    <div  id="contacts" class="contacts">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or inquiries, please feel free to reach out to us. We're happy to assist you!</p>
+        
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-phone"></i> <!-- Font Awesome phone icon -->
+            <p><strong>Phone:</strong> 123-4567-8901</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i> <!-- Font Awesome location icon -->
+            <p><strong>Address:</strong> Cebu City, Philippines</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i> <!-- Font Awesome email icon -->
+            <p><strong>Email:</strong> info@languageschool.com</p>
+          </div>
+        </div>
+    
+        <form action="#" method="post" class="contact-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+</div>      
+      <br><br><br>
+</body>
+</html>

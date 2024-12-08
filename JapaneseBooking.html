@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Look For Japanese Tutor</title>
+    <link rel="icon" type="image/png" href="Images/logo.png">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #2c3e50 50%, rgba(44, 62, 80, 0.8) 100%), 
+                url(https://www.teachermagazine.com/assets/images/teacher/Implementing-tutoring-interventions-in-schools.jpg);
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ecf0f1;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 96%;
+            background: linear-gradient(135deg, #2e547a, #2c4e70); /*chatgpt*/
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+            z-index: 1000;
+            transition: background-color 0.3s ease-in-out; 
+        }
+
+        .navbar .logo {
+            display: flex;  /* Use Flexbox to align items in a row */
+            align-items: center;  /* Vertically center the items */
+        }
+
+        .navbar .logo img {
+            width: 60px;  /* Adjust the size of the logo */
+            height: 60px;  /* Maintain aspect ratio */
+            margin-right: 10px;  /* Space between the logo and text */
+        }
+
+        .navbar .logo a {
+            color: #ecf0f1;
+            font-size: 26px;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar .nav-links li {
+            margin: 1px 20px;
+        }
+        .navbar .nav-links a {
+            color: #9abbc3; /* Lighter text color */
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #1abc9c; /* Lighter green color */
+        }
+        .navbar .loginsignup a {
+            color: #ecf0f1; 
+            font-size: 18px;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #e74c3c; /* Red background */
+            border-radius: 4px;
+            margin-left: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar .loginsignup a:hover {
+            background-color: #c0392b; /* Darker red on hover */
+            color: #fff;
+        }
+
+        header {
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .pricing {
+            color: black;
+            background-color:#00cccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .pricing h2 {
+            margin-bottom: 10px;
+        }
+
+        .tutor-selection {
+            background-color:#00cccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .tutor-selection h3 {
+            margin-top: 0;
+            color: black;
+        }
+
+        .tutor {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+             background-color: #ffcccc;
+        }
+
+        .tutor img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .tutor-info {
+            display: flex;
+            align-items: center;
+            
+        }
+
+        .tutor-info h4 {
+            margin: 0;
+            color: black;
+        }
+
+        .tutor-info p {
+            font-size: 0.9rem;
+            color: black;
+        }
+
+        .booking-form {
+            background-color:   #00cccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-form h3 {
+            color: black;
+        }
+
+        .booking-form label {
+            color: black;
+        }
+
+        .booking-form input,
+        .booking-form select,
+        .booking-form button {
+            width: 98%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            
+        }
+
+        .booking-form button {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        .booking-form button:hover {
+            background-color: #555;
+        }
+
+        .chat-interface {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .chat-interface h3 {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+        }
+
+        #chatBox {
+            height: 300px;
+            padding: 10px;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .chat-message {
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .chat-message.user {
+            background-color: #2c3e50;
+            color: white;
+            align-self: flex-end;
+        }
+
+        .chat-message.tutor {
+            background-color: #00cccc;
+            color: black;
+            align-self: flex-start;
+        }
+
+        #userMessage {
+            width: 75%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #sendMessage {
+            width: 20%;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        #sendMessage:hover {
+            background-color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #chatBox {
+                height: 200px;
+            }
+
+            #userMessage {
+                width: 70%;
+            }
+
+            #sendMessage {
+                width: 25%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .chat-interface {
+                padding: 10px;
+            }
+
+            #chatBox {
+                height: 150px;
+            }
+
+            #userMessage,
+            #sendMessage {
+                font-size: 12px;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+ <!-- Navbar -->
+ <div class="navbar">
+    <div class="logo">
+      <img src="Images/logo.png" alt="Logo">
+      <a href="Homepage.html">Cool School</a>
+  </div>
+    <ul class="nav-links">
+      <li><a href="Homepage.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Languages.html">Language/Courses</a></li>
+      <li><a href="Homepage.html#contacts">Contact</a></li>
+    </ul>
+    <div class="loginsignup">
+        <a href="index.html">Log Out</a>
+      </div>
+  </div>
+
+    <!-- Header -->
+    <header>
+        <h1>Look For Korean Tutor</h1>
+    </header>
+
+    <div class="container">
+        <!-- Pricing -->
+        <div class="pricing">
+            <h2>Pricing: $45 per hour</h2>
+            <p>Choose your preferred tutor and book a session at your convenience.</p>
+            <p><b>NOTE:</b> All of the following tutors are fluent in speaking the English Language.</p>
+        </div>
+
+      <!-- Tutor Selection -->
+<div class="tutor-selection">
+    <h3>Select Your Tutor</h3>
+    <!-- Tutor 1 -->
+    <div class="tutor">
+        <div class="tutor-info">
+            <img src="https://scontent.fcgy2-2.fna.fbcdn.net/v/t39.30808-6/462943456_2612945252428174_7088141692528931103_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGixZTMpKt8lmcDTGsLCLpZj0GPWN49JCmPQY9Y3j0kKfCs4wVLxomvmA-ZehxO0ZkUoAd_jUQjPkunzcHasfqg&_nc_ohc=qsdz1_igs4QQ7kNvgHhaHLB&_nc_zt=23&_nc_ht=scontent.fcgy2-2.fna&_nc_gid=AIFWbAxPdptFWZw10n3GYJj&oh=00_AYBcDhFiv1tPoHAi-NKFonRAm2wQwlvoQbXYcq2awas1IA&oe=67576AC7" alt="Tutor 1">
+            <div>
+                <h4>Nakamura Akihiko</h4>
+                <p>2 years of experience teaching conversational Japanese</p>
+                <p>Worked as a language guide for Japanese tourists in the US</p>
+                <p>Certified in Teaching Japanese as a Foreign Language</p>
+            </div>
+        </div>
+        <input type="radio" id="tutor1" name="tutor" value="Nakamura Akihiko" required>
+        <label for="tutor1">Select Nakamura Akihiko</label>
+    </div>
+
+    <!-- Tutor 2 -->
+    <div class="tutor">
+        <div class="tutor-info">
+            <img src="https://scontent.fcgy2-4.fna.fbcdn.net/v/t39.30808-1/448677224_2228520384147258_135202466639902682_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeGv-a1kLmduMeNPyrjyz9iuGBHLM9lxD3QYEcsz2XEPdJa0L6OBEN4HK7iVJ7zkJXtXBxccNZKijp12i8CmWntu&_nc_ohc=Fu2lsQeSjLQQ7kNvgEL_oyi&_nc_zt=24&_nc_ht=scontent.fcgy2-4.fna&_nc_gid=APwbvMsI7KQVm9zSmM9KUZO&oh=00_AYD-hQKyBC3-cRmoE5tCOvTvAhQ0q1SbSwVz5zPal7HqDA&oe=675783B3" alt="Tutor 2">
+            <div>
+                <h4>Yowrhi Ricacho</h4>
+                <p>3 years of experience teaching Japanese to beginners mainly for traveling purposes</p>
+                <p>Worked as a language consultant for a Japanese entertainment agency</p>
+                <p>Bachelor's degree in Japanese Language and Culture</p>
+            </div>
+        </div>
+        <input type="radio" id="tutor2" name="tutor" value="Yowrhi Ricacho" required>
+        <label for="tutor2">Select Yowrhi Ricacho</label>
+    </div>
+
+    <!-- Tutor 3 -->
+    <div class="tutor">
+        <div class="tutor-info">
+            <img src="https://scontent.fcgy2-1.fna.fbcdn.net/v/t39.30808-6/412661444_797011318851179_8586333107897737269_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF_a5t7FEBmpbV2HzZV5oSXDY5wVdEYVcQNjnBV0RhVxEi1luh85gh0pTav8AWQD7fJjIt9B2-lgU4Aem4w3-jK&_nc_ohc=4JiZCZu70ToQ7kNvgF3kO1F&_nc_zt=23&_nc_ht=scontent.fcgy2-1.fna&_nc_gid=Ayze2lB3yV9zsKVn9einJYY&oh=00_AYD8tRIhRoUo3AExaalQ1oj_QlBBLunPilg5KluONFFVAA&oe=675791CF" alt="Tutor 3">
+            <div>
+                <h4>Marki Tussin</h4>
+                <p>3 years of experience tutoring Japanese for travelers and beginners</p>
+                <p>Former language coach for Japanese-speaking professionals working abroad</p>
+                <p>Former research assistant at a Japanese language institute</p>
+                <p>Holds a degree in Applied Linguistics</p>
+            </div>
+        </div>
+        <input type="radio" id="tutor3" name="tutor" value="Marki Tussin" required>
+        <label for="tutor3">Select Marki Tussin</label>
+    </div>
+</div>
+
+<!-- Booking Form -->
+<div class="booking-form">
+    <h3>Book a Session</h3>
+    <form id="bookingForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+        
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <label for="payment">Select Payment Method:</label>
+             <select id="payment" name="payment" required>
+                <option value="paymaya"></option>
+                 <option value="paymaya">PayMaya</option>
+                 <option value="gcash">GCash</option>
+                 <option value="credit_card">Credit Card</option>
+                <option value="coinsph">Coins.Ph</option>
+
+             </select>
+        
+        <label for="time">Preferred Time:</label>
+        <select id="time" name="time" required>
+            <option value="09:00">9:00AM - 11:00AM</option>
+            <option value="11:00">11:00AM - 12:00NN</option>
+            <option value="12:00">12:00NN - 1:00PM</option>
+            <option value="13:00">1:00PM - 2:00PM</option>
+            <option value="14:00">2:00PM - 3:00PM</option>
+            <option value="15:00">3:00PM - 4:00PM</option>
+            <option value="16:00">4:00PM - 5:00PM</option>
+        </select>
+
+        <input type="hidden" id="selectedTutor" name="selectedTutor" value="">
+
+        <button type="submit">Book Session</button>
+    </form>
+</div>
+</div>
+
+<!-- Chat Interface (Added) -->
+<div class="chat-interface" style="display: none;">
+    <h3>Chat with Your Tutor</h3>
+    <div id="chatBox"></div>
+    <input type="text" id="userMessage" placeholder="Type a message">
+    <button id="sendMessage">Send</button>
+</div>
+
+<script>
+    // When selecting a tutor, we store the selected tutor's name in a hidden input field
+    document.querySelectorAll('input[name="tutor"]').forEach((radio) => {
+        radio.addEventListener('change', function() {
+            document.getElementById('selectedTutor').value = this.value;
+        });
+    });
+
+    // Add event listener to the booking form to prevent default action and start the chat
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent form submission
+
+        // Get the selected tutor
+        const selectedTutor = document.getElementById('selectedTutor').value;
+        
+        // Display the chat interface and start the conversation
+        document.querySelector('.chat-interface').style.display = 'block';
+        addMessage('tutor', `Hello, ${selectedTutor} here! How can I assist you today?`);
+    });
+
+    // Add a message to the chat
+    function addMessage(sender, message) {
+        const chatBox = document.getElementById("chatBox");
+        const messageElement = document.createElement("div");
+        messageElement.className = `chat-message ${sender}`;
+        messageElement.textContent = message;
+        chatBox.appendChild(messageElement);
+
+        // Scroll to the bottom
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    // Generate tutor's response based on the user's message
+    function generateTutorResponse(userMessage) {
+        const lowerMessage = userMessage.toLowerCase();
+
+        // Greeting variations
+        if (lowerMessage.includes("hello") || lowerMessage.includes("hi") || lowerMessage.includes("hilo")) {
+            return "Hello! Thank you for booking a session with me!";
+        }
+
+        // Response to "What app are we going to use?"
+        if (lowerMessage.includes("what app are we going to use") || lowerMessage.includes("what app will we use")) {
+            return "We will be using Google Classroom or Zoom!";
+        }
+
+        // Response to "Let's use Google Classroom"
+        if (lowerMessage.includes("lets use google classroom")) {
+            return "Okay! Let's use Google Classroom!";
+        }
+
+        // Response to "Let's use Zoom"
+        if (lowerMessage.includes("lets use zoom")) {
+            return "Okay! Let's use Zoom!";
+        }
+
+        // More generic responses
+        if (lowerMessage.includes("when should we start") || lowerMessage.includes("when do we start")) {
+            return "We will start very soon! Depending on the time you selected.";
+        }
+
+        if (lowerMessage.includes("it is nice to meet you") || lowerMessage.includes("nice to meet you")) {
+            return "It's nice to meet you too! Let's enjoy this session filled with fun!";
+        }
+
+        return "I'm here to help! Can you please clarify your question?";
+    }
+
+    // Handle sending the user's message
+    document.getElementById('sendMessage').addEventListener('click', function() {
+        const userMessage = document.getElementById('userMessage').value;
+        if (userMessage.trim()) {
+            addMessage('user', userMessage);
+            document.getElementById('userMessage').value = '';
+            const tutorResponse = generateTutorResponse(userMessage);
+            setTimeout(() => addMessage('tutor', tutorResponse), 1000);
+        }
+    });
+</script>
+</body>
+</html>

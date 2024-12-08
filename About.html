@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us</title>
+    <link rel="icon" href="Images/logo.png">
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #2c3e50 50%, rgba(44, 62, 80, 0.8) 100%), 
+      url(https://www.teachermagazine.com/assets/images/teacher/Implementing-tutoring-interventions-in-schools.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #ecf0f1;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 96%;
+  background: linear-gradient(135deg, #2e547a, #2c4e70); /*chatgpt*/
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out; 
+}
+
+.navbar .logo {
+  display: flex;  /* Use Flexbox to align items in a row */
+  align-items: center;  /* Vertically center the items */
+}
+
+.navbar .logo img {
+  width: 60px;  /* Adjust the size of the logo */
+  height: 60px;  /* Maintain aspect ratio */
+  margin-right: 10px;  /* Space between the logo and text */
+}
+
+.navbar .logo a {
+  color: #ecf0f1;
+  font-size: 26px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin: 1px 20px;
+}
+
+.navbar .nav-links a {
+  color: #9abbc3; /* Lighter text color */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.navbar .nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #1abc9c; /* Lighter green color */
+}
+.navbar .loginsignup a {
+  color: #ecf0f1; 
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #e74c3c; /* Red background */
+  border-radius: 4px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .loginsignup a:hover {
+  background-color: #c0392b; /* Darker red on hover */
+  color: #fff;
+}
+
+.word {
+  max-width: 50em;
+  margin-top: 8em;
+  background: rgba(44, 62, 80, 0.9); 
+  color: #ecf0f1; 
+  padding: 20px;
+  padding-bottom: 15%;
+  border-radius: 8px;
+  font-family: 'Arial', sans-serif;
+
+}
+
+.word h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #ecf0f1;  /* Keep it in line with the paragraph's color */
+  margin-bottom: 15px; /* Space below the heading */
+}
+
+.word p {
+  line-height: 1.8;
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+.word p:first-letter {
+  font-size: 2.5em;
+  color: #e74c3c; 
+  font-weight: bold;
+}
+/*Profile*/
+.head{
+    text-align: center;
+    font-size: 3em;
+}
+#ralf, #lucky {
+    height: 30em;
+    border-radius: 40em;
+    border: solid 5px black
+    
+}
+.name{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+.creator{
+    display: flex;
+    justify-content: space-evenly;
+}
+.profile{
+   background:  rgba(49, 76, 104, 0.4);
+   padding-top: 2em;
+   padding-bottom: 2em;
+}
+
+
+
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="Images/logo.png" alt="Logo">
+      <a href="Homepage.html">Cool School</a>
+  </div>
+    <ul class="nav-links">
+      <li><a href="Homepage.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Languages.html">Language/Courses</a></li>
+      <li><a href="Homepage.html#contacts">Contact</a></li>
+    </ul>
+    <div class="loginsignup">
+      <a href="index.html">Log Out</a>
+    </div>
+  </div>
+
+        <div id="word" class="word">
+            <h2>About Cool School Academy</h2>
+            <p>Welcome to <strong>Cool School Academy</strong>, your gateway to mastering languages with ease and excitement! At our core, we are passionate about making language learning accessible, interactive, and enjoyable for learners of all ages and levels.<br><br>
+          
+            From beginners taking their first steps to advanced learners refining their skills, we offer dynamic lessons, immersive tools, and a global community of learners to support you. Our platform is more than just a learning space—it's a vibrant cultural exchange where languages come alive.<br><br>
+          
+            Dive in today and let <strong>Cool School Academy</strong> open doors to new cultures, endless opportunities, and meaningful connections worldwide. The adventure begins here!</p>
+        </div>
+    
+        <br><br><br>
+
+    <div class="profile">
+        <h2 class="head">Creators</h2>
+
+        <div class="creator">
+           <img src="Images/ralf.jpg" alt="ralf" id="ralf">
+           <img src="Images/lucky.jpg" alt="lucky" id="lucky">
+        </div>
+        <div class="name">
+            <h3 >Ralf Niño James C. Franconas</h3>
+            <h3 >Lucky Q. Tababa</h3>
+        </div>
+    </div>
+
+    <br><br><br>
+
+</body>
+</html>

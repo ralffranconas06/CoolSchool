@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool School Sign Up Page</title>
+    <link rel="stylesheet" type="text/css" href="Sign_up.css">
+    <link rel="icon" href="Images/logo.png">
+</head>
+<body>
+
+<!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="Images/logo.png" alt="Logo">
+      <a href="index.html">Cool School</a>
+  </div>
+    <div class="loginsignup">
+      <a href="Log_in.html">Login</a>
+    </div>
+  </div>
+    </nav>
+
+    <form for="log_in">
+            <fieldset>
+              <h2>WELCOME!</h2>
+                <table>
+                  <tr>
+                    <td><label for="fname">First Name</label></td>
+                    <td><input type="text" id="fname" placeholder="First Name" required></td>
+                  </tr>
+                  <tr>
+                    <td><label for="lname">Last Name</label></td>
+                    <td><input type="text" id="lname" placeholder="Last Name" required></td>
+                  </tr>
+                  <tr>
+                    <td><label for="occupation">Occupation</label></td>
+                    <td><input type="text" id="occupation" placeholder="Student / Professor" required></td>
+                  </tr>
+                  <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input type="email" id="email" placeholder="Email Address" required></td>
+                  </tr>
+                  <tr>
+                    <td><label for="password">Password</label></td>
+                    <td><input type="password" id="password" placeholder="Password" required></td>
+                  </tr>
+                </table>
+                <button id="submit"onclick="validateSignUp(event)">Sign Up</button>
+                <p>Already got an account? <a href="Log_in.html">Log In</a></p>
+            </fieldset>
+        </form>
+
+<!-- Contact Section -->
+  <div class="contacts">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or inquiries, please feel free to reach out to us. We're happy to assist you!</p>
+    
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <div class="info-item">
+        <i class="fas fa-phone"></i> <!-- Font Awesome phone icon -->
+        <p><strong>Phone:</strong> 123-4567-8901</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i> <!-- Font Awesome location icon -->
+        <p><strong>Address:</strong> Cebu City, Philippines</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-envelope"></i> <!-- Font Awesome email icon -->
+        <p><strong>Email:</strong> info@languageschool.com</p>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <form action="#" method="post" class="contact-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn" onclick="contacts()">Send Message</button>
+    </form>
+  </div>
+<script src="Sign_up.js"></script>
+</body>
+</html>

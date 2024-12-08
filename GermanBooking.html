@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Look For German Tutor</title>
+    <link rel="icon" type="image/png" href="Images/logo.png">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #2c3e50 50%, rgba(44, 62, 80, 0.8) 100%), 
+                url(https://www.teachermagazine.com/assets/images/teacher/Implementing-tutoring-interventions-in-schools.jpg);
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ecf0f1;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 96%;
+            background: linear-gradient(135deg, #2e547a, #2c4e70); /*chatgpt*/
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+            z-index: 1000;
+            transition: background-color 0.3s ease-in-out; 
+        }
+
+        .navbar .logo {
+            display: flex;  /* Use Flexbox to align items in a row */
+            align-items: center;  /* Vertically center the items */
+        }
+
+        .navbar .logo img {
+            width: 60px;  /* Adjust the size of the logo */
+            height: 60px;  /* Maintain aspect ratio */
+            margin-right: 10px;  /* Space between the logo and text */
+        }
+
+        .navbar .logo a {
+            color: #ecf0f1;
+            font-size: 26px;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar .nav-links li {
+            margin: 1px 20px;
+        }
+
+        .navbar .nav-links a {
+            color: #9abbc3; /* Lighter text color */
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #1abc9c; /* Lighter green color */
+        }
+        .navbar .loginsignup a {
+            color: #ecf0f1; 
+            font-size: 18px;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #e74c3c; /* Red background */
+            border-radius: 4px;
+            margin-left: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar .loginsignup a:hover {
+            background-color: #c0392b; /* Darker red on hover */
+            color: #fff;
+        }
+
+        .word {
+            max-width: 600px;
+            margin: 20px auto;
+            background: rgba(44, 62, 80, 0.9); 
+            color: #ecf0f1; 
+            padding: 20px;
+            border-left: 5px solid #9b59b6; 
+            border-radius: 8px;
+            font-family: 'Arial', sans-serif;
+        }
+        header {
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .pricing {
+            color: black;
+            background-color:#00cccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .pricing h2 {
+            margin-bottom: 10px;
+        }
+
+        .tutor-selection {
+            background-color:#00cccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .tutor-selection h3 {
+            margin-top: 0;
+            color: black;
+        }
+
+        .tutor {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            background-color:  #ffcccc;
+        }
+
+        .tutor img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .tutor-info {
+            display: flex;
+            align-items: center;
+            
+        }
+
+        .tutor-info h4 {
+            margin: 0;
+            color: black;
+        }
+
+        .tutor-info p {
+            font-size: 0.9rem;
+            color: black;
+        }
+
+        .booking-form {
+            background-color:   #00cccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-form h3 {
+            color: black;
+        }
+
+        .booking-form label {
+            color: black;
+        }
+
+        .booking-form input,
+        .booking-form select,
+        .booking-form button {
+            width: 98%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            
+        }
+
+        .booking-form button {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        .booking-form button:hover {
+            background-color: #555;
+        }
+
+        .chat-interface {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .chat-interface h3 {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+        }
+
+        #chatBox {
+            height: 300px;
+            padding: 10px;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .chat-message {
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .chat-message.user {
+            background-color: #2c3e50;
+            color: white;
+            align-self: flex-end;
+        }
+
+        .chat-message.tutor {
+            background-color: #00cccc;
+            color: black;
+            align-self: flex-start;
+        }
+
+        #userMessage {
+            width: 75%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #sendMessage {
+            width: 20%;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        #sendMessage:hover {
+            background-color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #chatBox {
+                height: 200px;
+            }
+
+            #userMessage {
+                width: 70%;
+            }
+
+            #sendMessage {
+                width: 25%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .chat-interface {
+                padding: 10px;
+            }
+
+            #chatBox {
+                height: 150px;
+            }
+
+            #userMessage,
+            #sendMessage {
+                font-size: 12px;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+ <!-- Navbar -->
+ <div class="navbar">
+    <div class="logo">
+      <img src="Images/logo.png" alt="Logo">
+      <a href="Homepage.html">Cool School</a>
+  </div>
+    <ul class="nav-links">
+      <li><a href="Homepage.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Languages.html">Language/Courses</a></li>
+      <li><a href="Homepage.html#contacts">Contact</a></li>
+    </ul>
+    <div class="loginsignup">
+        <a href="index.html">Log Out</a>
+      </div>
+  </div>
+
+    <!-- Header -->
+    <header>
+        <h1>Look For Filipino Tutor</h1>
+    </header>
+
+    <div class="container">
+        <!-- Pricing -->
+        <div class="pricing">
+            <h2>Pricing: $33 per hour</h2>
+            <p>Choose your preferred tutor and book a session at your convenience.</p>
+            <p><b>NOTE:</b> All of the following tutors are fluent in speaking the English Language.</p>
+
+        </div>
+
+      <!-- Tutor Selection -->
+<div class="tutor-selection">
+    <h3>Select Your Tutor</h3>
+    <!-- Tutor 1 -->
+    <div class="tutor">
+        <div class="tutor-info">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNZjQHj4yL5G_55A8nsv7ViwdcpfRnETHG2w&s" alt="Tutor 1">
+            <div>
+                <h4>Bernd Sauber</h4>
+                <p>Veteran German language tutor with a focus on speaking skills.</p>
+                <p>3 years of experience teaching German to non-native speakers</p>
+                <p>Holds a Master’s degree in German Linguistics</p>
+            </div>
+        </div>
+        <input type="radio" id="tutor1" name="tutor" value="Bernd Sauber" required>
+        <label for="tutor1">Select Bernd Sauber</label>
+    </div>
+
+    <!-- Tutor 2 -->
+    <div class="tutor">
+        <div class="tutor-info">
+            <img src="https://external-preview.redd.it/germanys-rude-economic-awakening-v0-paT8ZGr6S-wS7Mgf069xEpGg_o4zcY2yZuNv-uW7MKg.jpg?width=640&crop=smart&auto=webp&s=0ee6a453fc4cce64d2a597bff51b1bb1f5261286" alt="Tutor 2">
+            <div>
+                <h4>Uschi Becker</h4>
+                <p>5 years of experience tutoring German for academic purposes</p>
+                <p>Bachelor’s degree in German Literature</p>
+                <p>Previously worked as a translator for a German tech company</p>
+            </div>
+        </div>
+        <input type="radio" id="tutor2" name="tutor" value="Uschi Becker" required>
+        <label for="tutor2">Select Uschi Becker</label>
+    </div>
+
+     <div class="tutor">
+        <div class="tutor-info">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfehhXYmNztA-yXqR67zBA9VH8hom2LFeE7A&s" alt="Tutor 2">
+            <div>
+                <h4>Sonje Baasch</h4>
+                <p>3 years of experience teaching German pronunciation and grammar</p>
+                <p>Former editor for a German language learning magazine</p>
+                <p>Experienced in German language tutoring</p>
+
+            </div>
+        </div>
+        <input type="radio" id="tutor2" name="tutor" value="Sonje Baasch" required>
+        <label for="tutor2">Select Sonje Baasch</label>
+    </div>
+
+    <!-- Tutor 3 -->
+    <div class="tutor">
+        <div class="tutor-info">
+            <img src="https://eurodate.org/wp-content/uploads/2023/05/EUROAI2_german2-1.jpg" alt="Tutor 3">
+            <div>
+                <h4>Emilie Winkler</h4>
+                <p>Specializes in teaching German for beginners and travel purposes.</p>
+                <p>4 years of experience tutoring advanced German for literature and research</p>
+                <p>Former research assistant in a German academic publishing house</p>
+                <p>Holds a Master’s degree in German Linguistics</p>
+
+            </div>
+        </div>
+        <input type="radio" id="tutor3" name="tutor" value="Emilie Winkler" required>
+        <label for="tutor3">Select Emilie Winkler</label>
+    </div>
+</div>
+
+<!-- Booking Form -->
+<div class="booking-form">
+    <h3>Book a Session</h3>
+    <form id="bookingForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+        
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+
+       <label for="payment">Select Payment Method:</label>
+             <select id="payment" name="payment" required>
+                <option value="paymaya"></option>
+                 <option value="paymaya">PayMaya</option>
+                 <option value="gcash">GCash</option>
+                 <option value="credit_card">Credit Card</option>
+                <option value="coinsph">Coins.Ph</option>
+             </select>
+        
+        <label for="time">Preferred Time:</label>
+        <select id="time" name="time" required>
+            <option value="09:00">9:00AM - 11:00AM</option>
+            <option value="11:00">11:00AM - 12:00NN</option>
+            <option value="12:00">12:00NN - 1:00PM</option>
+            <option value="13:00">1:00PM - 2:00PM</option>
+            <option value="14:00">2:00PM - 3:00PM</option>
+            <option value="15:00">3:00PM - 4:00PM</option>
+            <option value="16:00">4:00PM - 5:00PM</option>
+        </select>
+
+        <input type="hidden" id="selectedTutor" name="selectedTutor" value="">
+
+        <button type="submit">Book Session</button>
+    </form>
+</div>
+</div>
+
+<!-- Chat Interface (Added) -->
+<div class="chat-interface" style="display: none;">
+    <h3>Chat with Your Tutor</h3>
+    <div id="chatBox"></div>
+    <input type="text" id="userMessage" placeholder="Type a message">
+    <button id="sendMessage">Send</button>
+</div>
+
+<script>
+    // When selecting a tutor, we store the selected tutor's name in a hidden input field
+    document.querySelectorAll('input[name="tutor"]').forEach((radio) => {
+        radio.addEventListener('change', function() {
+            document.getElementById('selectedTutor').value = this.value;
+        });
+    });
+
+    // Add event listener to the booking form to prevent default action and start the chat
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent form submission
+
+        // Get the selected tutor
+        const selectedTutor = document.getElementById('selectedTutor').value;
+        
+        // Display the chat interface and start the conversation
+        document.querySelector('.chat-interface').style.display = 'block';
+        addMessage('tutor', `Hello, ${selectedTutor} here! How can I assist you today?`);
+    });
+
+    // Add a message to the chat
+    function addMessage(sender, message) {
+        const chatBox = document.getElementById("chatBox");
+        const messageElement = document.createElement("div");
+        messageElement.className = `chat-message ${sender}`;
+        messageElement.textContent = message;
+        chatBox.appendChild(messageElement);
+
+        // Scroll to the bottom
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    // Generate tutor's response based on the user's message
+    function generateTutorResponse(userMessage) {
+        const lowerMessage = userMessage.toLowerCase();
+
+        // Greeting variations
+        if (lowerMessage.includes("hello") || lowerMessage.includes("hi") || lowerMessage.includes("hilo")) {
+            return "Hello! Thank you for booking a session with me!";
+        }
+
+        if (lowerMessage.includes("what app are we going to use") || lowerMessage.includes("what app will we use")) {
+            return "We will be using Google Classroom or Zoom!";
+        }
+
+        if (lowerMessage.includes("lets use google classroom")) {
+            return "Okay! Let's use Google Classroom!";
+        }
+
+        if (lowerMessage.includes("lets use zoom")) {
+            return "Okay! Let's use Zoom!";
+        }
+
+        if (lowerMessage.includes("when should we start") || lowerMessage.includes("when do we start")) {
+            return "We will start very soon! Depending on the time you selected.";
+        }
+
+        if (lowerMessage.includes("it is nice to meet you") || lowerMessage.includes("nice to meet you")) {
+            return "It's nice to meet you too! Let's enjoy this session filled with fun!";
+        }
+
+        return "I dont understand! Can you please clarify your question?";
+    }
+
+    document.getElementById('sendMessage').addEventListener('click', function() {
+        const userMessage = document.getElementById('userMessage').value;
+        if (userMessage.trim()) {
+            addMessage('user', userMessage);
+            document.getElementById('userMessage').value = '';
+            const tutorResponse = generateTutorResponse(userMessage);
+            setTimeout(() => addMessage('tutor', tutorResponse), 1000);
+        }
+    });
+</script>
+</body>
+</html>

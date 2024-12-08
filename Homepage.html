@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool School Academy</title>
+    <link rel="stylesheet" type="text/css" href="Homepage.css">
+    <link rel="icon" href="Images/logo.png">
+</head>
+<body>
+
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="Images/logo.png" alt="Logo">
+      <a href="Homepage.html">Cool School</a>
+  </div>
+    <ul class="nav-links">
+      <li><a href="Homepage.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Languages.html">Language/Courses</a></li>
+      <li><a href="Homepage.html#contacts">Contact</a></li>
+    </ul>
+    <div class="loginsignup">
+      <a href="index.html">Log Out</a>
+    </div>
+  </div>
+  
+
+
+
+
+<div class="word">
+  <img src="Images/logo.png" alt="logo" id="image">
+  <h2> Cool School Academy</h2>
+</div>
+
+
+
+
+  <!-- Contact Section -->
+<div class="whole">
+  <div  id="contacts" class="contacts">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or inquiries, please feel free to reach out to us. We're happy to assist you!</p>
+    
+    <div class="contact-info">
+      <div class="info-item">
+        <i class="fas fa-phone"></i> <!-- Font Awesome phone icon -->
+        <p><strong>Phone:</strong> 123-4567-8901</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i> <!-- Font Awesome location icon -->
+        <p><strong>Address:</strong> Cebu City, Philippines</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-envelope"></i> <!-- Font Awesome email icon -->
+        <p><strong>Email:</strong> info@languageschool.com</p>
+      </div>
+    </div>
+
+    <form action="#" method="post" class="contact-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn" onclick="contacts()">Send Message</button>
+    </form>
+  </div>
+</div>
+
+  <br><br><br>
+<script>
+  function contacts(){
+  event.preventDefault();
+  
+  let name = document.getElementById('name').value;
+  let email = document.getElementById('email').value;
+  let message = document.getElementById('message').value;
+
+  if(name == "" || name == null && email == "" || email == null)
+  {
+    alert("Fields must be filled up");
+    return false;
+  } 
+  else if(message == "" || message == null)
+  {
+    alert("Fields must be filled up");
+  } 
+  else if(name == "" || name == null && message == "" || message == null)
+  {
+    alert("Fields must be filled up");
+  }
+    
+  else if(email == "" || email == null && message == "" || message == null){
+    alert("Fields must be filled up");
+  }
+  else{
+  alert("Your message will send right away!");
+}
+}
+</script>
+</body>
+</html>
+
