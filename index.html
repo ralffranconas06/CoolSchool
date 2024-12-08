@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool School Academy</title>
+    <link rel="icon" href="Images/logo.png">
+    <style>
+      body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #2c3e50 50%, rgba(44, 62, 80, 0.8) 100%), 
+      url(https://www.teachermagazine.com/assets/images/teacher/Implementing-tutoring-interventions-in-schools.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #ecf0f1;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 96%;
+  background: linear-gradient(135deg, #2e547a, #2c4e70); /*chatgpt*/
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out; 
+}
+
+.navbar .logo {
+  display: flex;  /* Use Flexbox to align items in a row */
+  align-items: center;  /* Vertically center the items */
+}
+
+.navbar .logo img {
+  width: 60px;  /* Adjust the size of the logo */
+  height: 60px;  /* Maintain aspect ratio */
+  margin-right: 10px;  /* Space between the logo and text */
+}
+
+.navbar .logo a {
+  color: #ecf0f1;
+  font-size: 26px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin: 1px 20px;
+}
+
+.navbar .nav-links a {
+  color: #9abbc3; /* Lighter text color */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #1abc9c; /* Lighter green color */
+}
+
+.navbar .loginsignup a {
+  color: #ecf0f1; 
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #e74c3c; /* Red background */
+  border-radius: 4px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .loginsignup a:hover {
+  background-color: #c0392b; /* Darker red on hover */
+  color: #fff;
+}
+
+
+.word {
+  max-width: 600px;
+  margin: 20px auto;
+  margin-right: 20%;
+  margin-left: 31%;
+  margin-top: 8%;
+  margin-bottom: 20%;
+  color: #ecf0f1; 
+  padding: 2%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  font-size: 35px;
+  border: none;
+}
+
+/* Content Section */
+.content {
+  text-align: center;
+  padding-top: 100px;
+  padding-left: 35px;
+  max-width: 1200px;
+
+}
+
+#word {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+
+.contacts {
+  margin-top: 4%;
+  padding-top: 6%;
+  padding-bottom: 6%;
+  text-align: center;
+  background:  rgba(49, 76, 104, 0.4);
+}
+
+#contact {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #34495e;
+  color: #ecf0f1;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+  margin-top: 5%;
+}
+
+.contact-info .info-item {
+  text-align: left;
+}
+
+.contact-info .info-item i {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #1abc9c;
+}
+
+.contact-info p {
+  font-size: 18px;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #ecf0f1;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form input[type="text"], 
+.contact-form input[type="email"], 
+.contact-form textarea {
+  background-color: #34495e;
+  color: #ecf0f1;
+}
+
+.contact-form button {
+  padding: 14px;
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #16a085;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="Images/logo.png" alt="Logo">
+      <a href="Homepage.html">Cool School</a>
+  </div>
+    <div class="loginsignup">
+      <a href="Log_in.html">Login</a>
+      <a href="Sign_up.html">Sign Up</a>
+    </div>  
+  </div>
+
+
+
+
+<div class="word">
+  <img src="Images/logo.png" alt="logo" id="image">
+  <h2> Cool School Academy</h2>
+</div>
+
+
+
+
+  <!-- Contact Section -->
+<div class="whole">
+  <div  id="contacts" class="contacts">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or inquiries, please feel free to reach out to us. We're happy to assist you!</p>
+    
+    <div class="contact-info">
+      <div class="info-item">
+        <i class="fas fa-phone"></i> <!-- Font Awesome phone icon -->
+        <p><strong>Phone:</strong> 123-4567-8901</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i> <!-- Font Awesome location icon -->
+        <p><strong>Address:</strong> Cebu City, Philippines</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-envelope"></i> <!-- Font Awesome email icon -->
+        <p><strong>Email:</strong> info@languageschool.com</p>
+      </div>
+    </div>
+
+    <form action="#" method="post" class="contact-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+</div>
+
+  <br><br><br>
+  
+</body>
+</html>
+
