@@ -19,9 +19,8 @@
       <a href="Log_in.html">Login</a>
     </div>
   </div>
-    </nav>
 
-    <form for="log_in">
+    <form name="log_in">
             <fieldset>
               <h2>WELCOME!</h2>
                 <table>
@@ -46,7 +45,7 @@
                     <td><input type="password" id="password" placeholder="Password" required></td>
                   </tr>
                 </table>
-                <button id="submit"onclick="validateSignUp(event)">Sign Up</button>
+                <button id="submit" onclick="validateSignUp(event)">Sign Up</button>
                 <p>Already got an account? <a href="Log_in.html">Log In</a></p>
             </fieldset>
         </form>
@@ -80,7 +79,7 @@
       </div>
       <div class="form-group">
         <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <input type="email" name="email" placeholder="Enter your email" required>
       </div>
       <div class="form-group">
         <label for="message">Your Message</label>
